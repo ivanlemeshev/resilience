@@ -1,0 +1,13 @@
+services:
+  rate_limiting:
+    build: .
+    ports:
+      - "8080:8080"
+    deploy:
+      resources:
+        limits:
+          cpus: '.20'
+          memory: 100M
+        reservations:
+          cpus: '0.10'
+          memory: 50M
